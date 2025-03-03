@@ -1,0 +1,87 @@
+.frontpage-card {
+  height: 750px;
+  padding-left: 100px;
+  position: relative;
+}
+
+.frontpage-cards__card {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  height: 500px;
+  pointer-events: none;
+  position: absolute;
+  width: 500px;
+  transition: transform 0.3s ease; /* Ensures smooth hover effect */
+}
+
+.frontpage-cards__card:hover {
+  transform: scale(1.02) ;
+}
+
+.frontpage-cards__card--active {
+  pointer-events: auto;
+  transform: rotate(-16deg) ;
+  transition: transform 3s ease;
+}
+
+.img-1 {
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.01);
+  width: 100%;
+  border-style: none;
+  max-width: 100%;
+}
+
+.img-1 {
+  height: 70%;
+  width: 50%;
+  position: absolute;
+  object-fit: cover;
+  transform: rotate(0deg);
+  transition: all 3s;
+  animation: stackAnimation 6s ease-in forwards;
+  
+  /* animation: stackAnimation 6s infinite; */
+}
+@keyframes stackAnimation {
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(-6deg);
+  }
+}
+
+.image:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.image:nth-child(3) {
+  animation-delay: 4s;
+
+}
+
+
+.img-2{
+  height: 70%;
+  width: 50%;
+  position: absolute;
+  object-fit: cover;
+ 
+  
+  animation: step-start 6s ease-in forwards;
+  
+}
+
+@keyframes step-start {
+  0%{
+    transform: rotate(0deg);
+  transform: translateX(730px);
+  }
+
+  100%{
+    transform:translateX(730px); rotate(-6deg);
+  }
+  
+}
