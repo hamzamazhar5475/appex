@@ -300,7 +300,7 @@ li:not(:last-child)::after {
   opacity: 1;
 }
 
-.big-list.group:not(:hover) {
+.big-list.group > div:not(:hover) {
   opacity: 0.3;
 }
 
