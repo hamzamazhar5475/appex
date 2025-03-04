@@ -211,7 +211,7 @@ li:not(:last-child)::after {
 .text-section {
   background-color: #221e20;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   padding: 7rem;
 }
 
@@ -221,6 +221,12 @@ li:not(:last-child)::after {
   font-weight: 500;
   margin-bottom: 3rem;
 }
+
+.bg-group{
+  transition: opacity 0.3s ease;
+}
+
+
 
 .text-content {
   display: flex;
@@ -234,8 +240,7 @@ li:not(:last-child)::after {
   border-bottom-width: 2px;
   border-left: 0;
   border-right: 0;
-  column-gap: 10rem;
-  transition: opacity 0.3s ease;
+  column-gap: 10rem;  
 }
 
 .tick {
@@ -294,16 +299,4 @@ li:not(:last-child)::after {
 
 .text-colorpink {
   color: #fab487;
-}
-
-.big-list.group > div:hover {
-  opacity: 1;
-}
-
-.big-list.group > div:not(:hover) {
-  opacity: 0.3;
-}
-
-.big-list.group:hover {
-  opacity: 1;
 }
