@@ -23,8 +23,6 @@ body {
  Heros section
   */
 
-
-
 .hero-section {
   height: 80vh;
   display: grid;
@@ -55,7 +53,6 @@ body {
 }
 
 .frontpage-cards__card {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   height: 500px;
   pointer-events: none;
   position: absolute;
@@ -64,41 +61,40 @@ body {
 }
 
 .frontpage-cards__card:hover {
-  transform: scale(1.02) ;
+  transform: scale(1.02);
 }
 
 .frontpage-cards__card--active {
   pointer-events: auto;
-  transform: rotate(-16deg) ;
+  transform: rotate(-16deg);
   transition: transform 3s ease;
 }
 
-.img-1 {
+/* .img-1 {
   height: 100%;
   object-fit: cover;
   transform: scale(1.01);
-  width: 100%;
+  width: 50%;
   border-style: none;
   max-width: 100%;
-}
+} */
 
 .img-1 {
-  height: 70%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  object-fit: cover;
   transform: rotate(0deg);
   transition: all 3s;
   animation: stackAnimation 6s ease-in forwards;
-  
+
   /* animation: stackAnimation 6s infinite; */
 }
 @keyframes stackAnimation {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
 
-  100%{
+  100% {
     transform: rotate(-6deg);
   }
 }
@@ -109,31 +105,24 @@ body {
 
 .image:nth-child(3) {
   animation-delay: 4s;
-
 }
 
-
-.img-2{
-  height: 70%;
-  width: 50%;
+.img-2 {
+  height: 100%;
+  width: 100%;
   position: absolute;
-  object-fit: cover;
- 
-  
   animation: step-start 6s ease-in forwards;
-  
 }
 
 @keyframes step-start {
-  0%{
+  0% {
     transform: rotate(0deg);
-  transform: translateX(730px);
+    transform: translateX(730px);
   }
 
-  100%{
-    transform:translateX(730px); rotate(-6deg);
+  100% {
+    transform: translateX(730px) rotate(-6deg);
   }
-  
 }
 
 /*
@@ -310,7 +299,6 @@ li:not(:last-child)::after {
 TEXT SECTION
   */
 
-
 .text-section {
   background-color: #221e20;
   width: 100%;
@@ -415,13 +403,9 @@ TEXT SECTION
   opacity: 1;
 }
 
-
 /*
 BLOCK SECTION
   */
-
-
-
 
 .block-section {
   padding: 8rem 3rem;
