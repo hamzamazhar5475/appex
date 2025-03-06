@@ -1,0 +1,102 @@
+/*  Hero Section  */
+.hero-section {     
+  height: 90vh;     
+  display: grid;     
+  grid-template-columns: 1fr 1fr;     
+  margin: 0 auto;     
+  background-color: #edece9;     
+  padding: 3rem;  
+  overflow: hidden;    
+}     
+
+.hero-content {     
+  display: flex;     
+  justify-content: center;     
+  align-items: center;   
+}     
+
+.heading-1 {     
+  font-size: 6.2rem;     
+  font-weight: 500;     
+  letter-spacing: -0.03rem;     
+  line-height: 1.35;     
+  padding: 0 3rem;   
+}     
+
+.frontpage-card {  
+  display: flex;     
+  justify-content: center;     
+  align-items: center; 
+  height: 750px;     
+  padding-left: 100px;     
+  position: relative;
+}     
+
+.frontpage-cards__card {     
+  height: 500px;     
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);    
+  width: 500px;    
+}     
+
+
+.img-1 {     
+  height: 100%;     
+  width: 100%;     
+  position: absolute;       
+  animation: stackAnimation 4s ease-in infinite alternate;   
+}     
+
+.img-2 {     
+  width: 110%;     
+  height: 100%;    
+  position: absolute;     
+  transform: translateX(95rem); 
+  animation: screenAnimation 8s ease-in-out infinite alternate; 
+}     
+
+.img-3 {     
+  height: 100%;
+  width: 100%;
+  position: absolute;   
+  transform: translateX(95rem); 
+  animation: screenAnimation 16s ease-in-out infinite alternate ;   
+}     
+
+
+.img-1.reverse {  
+  animation: stackAnimationReverse 14s ease-out infinite alternate;   
+}
+
+.img-2.reverse {  
+  animation: screenAnimationReverse 18s ease-in-out infinite alternate;
+}
+
+.img-3.reverse {  
+  animation: screenAnimationReverse 20s ease-in-out infinite alternate;
+}
+
+@keyframes stackAnimation {     
+  0% { transform: rotate(0deg); }     
+  50% { transform: rotate(-6deg); }     
+  100% { transform: rotate(-6deg); }   
+}    
+
+@keyframes screenAnimation {     
+  0% { transform: translateX(95rem);}  
+  100% { transform: translateX(0rem); }   
+}
+
+
+@keyframes stackAnimationReverse {     
+  0% { transform: rotate(-6deg); }     
+  50% { transform: rotate(0deg); }     
+  100% { transform: rotate(0deg); }   
+}    
+
+@keyframes screenAnimationReverse {     
+  0% { transform: translateX(0rem); }  
+  100% { transform: translateX(95rem); }   
+}
