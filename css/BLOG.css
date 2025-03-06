@@ -4,9 +4,9 @@
 
 .blog-section {
   width: 100%;
-  height: 100vw;
-  padding-bottom: 3rem;
+  padding-bottom: 7rem;
   padding-top: 3rem;
+  background-color: #edece9;
 }
 
 .blog-heading {
@@ -24,13 +24,14 @@
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 7.8rem;
+  z-index: 11;
 }
 
 .blog-content {
   display: flex;
-  width: 100%;
-  gap: 0.75rem;
+  gap: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .blog-content-box {
@@ -40,10 +41,13 @@
   flex-direction: column;
   justify-content: space-between;
   flex: none;
+  width: 100%;
+  height: auto;
   position: relative;
   overflow: hidden;
-  width: 50rem;
-  /* height: 12rem; */
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blog-content-box::after,
@@ -53,13 +57,33 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(0deg, transparent 60%, rgba(0, 0, 0, 0.6));
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-content-box::before {
+  opacity: 0;
+}
+
+.blog-content-box:hover:after,
+.blog-content-box:hover::before {
+  background: #0835c4;
+  opacity: 1;
 }
 
 .blog-content-img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
   object-position: top;
+  object-fit: cover;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-content-box:hover .blog-content-img {
+  transform: scale(1.05);
 }
 
 .blog-content-fornt {
@@ -70,20 +94,173 @@
 }
 
 .fornt-heading {
+  width: 40rem;
   color: white;
   margin-top: 0;
   margin-bottom: 1.9rem;
-  font-size: 3rem;
+  font-size: 3.1rem;
   font-weight: 500;
   letter-spacing: -0.03rem;
-  line-height: 1.75rem;
+  line-height: 1.2;
 }
 
 .blog-content-hide {
-  font-size: 20px;
-  transition-duration: 0.15s;
+  width: 40rem;
+  font-size: 2rem;
+  font-weight: 400;
+  transition-duration: 0.5s;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
-  line-height: 1.25;
+  line-height: 1.6;
+  z-index: 12;
+}
+
+.blog-content-box:hover .blog-content-hide {
+  opacity: 1;
+  transform: translateY(10px);
+  transition-duration: 0.5s;
+}
+
+.hide-content-w {
+  width: 30rem;
+}
+
+.big-img {
+  width: 70rem;
+}
+
+.blog-w {
+  width: 35rem;
+}
+
+.blog-w2 {
+  width: 40rem;
+}
+
+.big-img2 {
+  width: 72rem;
+}
+
+.blog-w3 {
+  width: 35rem;
+}
+
+.big-img3 {
+  width: 65rem;
+}
+
+.btn-box {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.btn {
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: inherit;
+  text-decoration: underline;
+  background-color: transparent;
+  text-decoration-color: currentcolor;
+  transition: text-decoration 0.1s ease-in;
+}
+
+.btn:hover {
+  text-decoration: underline;
+  text-decoration-color: #fab487;
+}
+
+/*
+ FOOTER SECTION 
+*/
+
+.footer {
+  background-color: #221e20;
+  margin: 0 auto;
+  height: 60rem;
+}
+
+.footer__container {
+  margin: 0 auto;
+  font-size: 1.16em;
+  color: #ffffff;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.footer-content {
+  display: flex;
+  margin-top: 6rem;
+}
+
+.orderlist-box {
+  display: flex;
+  width: 100%;
+  margin-bottom: 3rem;
+  order: 3;
+  align-items: end;
+}
+
+.order-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footerlist {
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+  background-color: transparent;
+  transition: text-decoration 0.1s ease-in;
+}
+
+.whitecolor {
+  color: #ffffff;
+  text-decoration-thickness: 0.1em;
+}
+
+.whitecolor:hover {
+  text-decoration: underline;
+  text-decoration-color: #fab487;
+  text-decoration-thickness: 0.1em;
+}
+
+.container {
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  margin-top: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.footerend {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #c9c1ba;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.adress {
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.footerlogo {
+  display: flex;
+  justify-content: end;
+  height: 10rem;
+  margin-top: 10rem;
+  padding-right: 7rem;
+}
+
+.logoimg {
+  width: 10rem;
+  height: 10rem;
 }

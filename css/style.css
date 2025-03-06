@@ -158,6 +158,7 @@ body {
   background-color: #221f16;
   overflow: hidden;
   position: relative;
+  z-index: 4564;
 }
 
 .gallery-img-1 {
@@ -222,7 +223,7 @@ h3 {
   color: #221e20;
 }
 
-li:not(:last-child)::after {
+.orderlist li:not(:last-child)::after {
   color: rgba(0, 0, 0, 0.25);
   content: "//";
   margin: 0 1rem;
@@ -295,6 +296,29 @@ li:not(:last-child)::after {
   line-height: 1.4;
 }
 
+/* galleryend */
+
+.endgallery {
+  background-color: #221e20;
+  width: 100%;
+  height: 45vh;
+  margin-top: -41rem;
+  position: relative;
+}
+.end-img {
+  background-image: url("../img/ascii-pattern-white.svg");
+  width: 50%;
+  background-size: cover;
+  height: 220px;
+  opacity: 0.4;
+  overflow: hidden;
+  position: absolute;
+  left: 5.2rem;
+  top: 63%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
 /*
 TEXT SECTION
   */
@@ -303,7 +327,7 @@ TEXT SECTION
   background-color: #221e20;
   width: 100%;
   height: 80vh;
-  padding: 7rem;
+  padding: 5rem;
 }
 
 .text-section__h2 {
@@ -401,6 +425,7 @@ TEXT SECTION
 
 .text-content {
   opacity: 1;
+  transition-duration: 0.9s;
 }
 
 /*
@@ -507,8 +532,7 @@ BLOCK SECTION
   grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: 8rem 8rem 8rem;
   margin: 0 auto;
-  row-gap: 5rem;
-  column-gap: 5rem;
+  gap: 8rem;
 }
 
 .logo-box {
