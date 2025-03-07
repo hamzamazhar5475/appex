@@ -1,102 +1,152 @@
 /*  Hero Section  */
-.hero-section {     
-  height: 90vh;     
-  display: grid;     
-  grid-template-columns: 1fr 1fr;     
-  margin: 0 auto;     
-  background-color: #edece9;     
-  padding: 3rem;  
-  overflow: hidden;    
-}     
+.hero-section {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  background-color: #edece9;
+  padding: 3rem;
+  overflow: hidden;
+  z-index: 22;
+}
 
-.hero-content {     
-  display: flex;     
-  justify-content: center;     
-  align-items: center;   
-}     
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.heading-1 {     
-  font-size: 6.2rem;     
-  font-weight: 500;     
-  letter-spacing: -0.03rem;     
-  line-height: 1.35;     
-  padding: 0 3rem;   
-}     
+.heading-1 {
+  font-size: 6.2rem;
+  font-weight: 500;
+  letter-spacing: -0.03rem;
+  line-height: 1.35;
+  padding: 0 3rem;
+}
 
-.frontpage-card {  
-  display: flex;     
-  justify-content: center;     
-  align-items: center; 
-  height: 750px;     
-  padding-left: 100px;     
+.frontpage-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 750px;
+  padding-left: 100px;
   position: relative;
-}     
+  z-index: 22;
+}
 
-.frontpage-cards__card {     
-  height: 500px;     
-  position: absolute; 
+.frontpage-cards__card {
+  height: 400px;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);    
-  width: 500px;    
-}     
+  transform: translate(-50%, -50%);
+  width: 400px;
+  z-index: 22;
+}
 
-
-.img-1 {     
-  height: 100%;     
-  width: 100%;     
-  position: absolute;       
-  animation: stackAnimation 4s ease-in infinite alternate;   
-}     
-
-.img-2 {     
-  width: 110%;     
-  height: 100%;    
-  position: absolute;     
-  transform: translateX(95rem); 
-  animation: screenAnimation 8s ease-in-out infinite alternate; 
-}     
-
-.img-3 {     
+.img-card {
   height: 100%;
   width: 100%;
-  position: absolute;   
-  transform: translateX(95rem); 
-  animation: screenAnimation 16s ease-in-out infinite alternate ;   
-}     
-
-
-.img-1.reverse {  
-  animation: stackAnimationReverse 14s ease-out infinite alternate;   
+  object-fit: cover;
 }
 
-.img-2.reverse {  
-  animation: screenAnimationReverse 18s ease-in-out infinite alternate;
+.img-1 {
+  position: absolute;
+  pointer-events: none;
+  animation: stackAnimation 5s ease-in-out 2;
+  animation-direction: alternate;
+  z-index: -1;
 }
 
-.img-3.reverse {  
-  animation: screenAnimationReverse 20s ease-in-out infinite alternate;
+.img-2 {
+  position: absolute;
+  pointer-events: none;
+  transform: translateX(95rem);
+  animation: screenAnimation 8s ease-in-out 2 3s;
+  animation-direction: alternate;
+  z-index: 11113;
 }
 
-@keyframes stackAnimation {     
-  0% { transform: rotate(0deg); }     
-  50% { transform: rotate(-6deg); }     
-  100% { transform: rotate(-6deg); }   
-}    
-
-@keyframes screenAnimation {     
-  0% { transform: translateX(95rem);}  
-  100% { transform: translateX(0rem); }   
+.img-3 {
+  position: absolute;
+  pointer-events: none;
+  transform: translateX(95rem);
+  animation: forwardAnimation 12s ease-in-out 2 5s;
+  animation-direction: alternate;
+  z-index: 11113;
 }
 
+.reverse1 {
+  animation: reversestackAnimation 5s ease-in-out 2 45s;
+}
 
-@keyframes stackAnimationReverse {     
-  0% { transform: rotate(-6deg); }     
-  50% { transform: rotate(0deg); }     
-  100% { transform: rotate(0deg); }   
-}    
+.reverse2 {
+  animation: reversescreenAnimation 8s ease-in-out 2 30s;
+}
 
-@keyframes screenAnimationReverse {     
-  0% { transform: translateX(0rem); }  
-  100% { transform: translateX(95rem); }   
+.reverse3 {
+  animation: reverseforwardAnimation 9s ease-in-out 20s;
+}
+
+@keyframes stackAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes screenAnimation {
+  0% {
+    transform: translateX(95rem);
+  }
+  100% {
+    transform: translateX(-2rem);
+  }
+}
+
+@keyframes forwardAnimation {
+  0% {
+    transform: translateX(95rem);
+  }
+  90% {
+    transform: translateX(-5rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes reversestackAnimation {
+  0% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes reversescreenAnimation {
+  0% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(95rem);
+  }
+}
+
+@keyframes reverseforwardAnimation {
+  0% {
+    transform: translateX(0rem);
+  }
+  100% {
+    transform: translateX(95rem);
+  }
 }

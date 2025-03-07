@@ -13,14 +13,16 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <title>Appex</title>
 </head>
 
 <body>
   <header class="header">
     <div class="header_logo">
-      <a href="#">
-        <span class="logo-img">Appex</span>
+      <a href="#" class="logo-img">
+        <span>Appex</span>
       </a>
       <nav class="nav-menu">
         <ul class="nav-menu-list">
@@ -31,7 +33,15 @@
           <li><a href="#">Kontakt</a></li>
         </ul>
       </nav>
-      <button>
+      <button class="nav-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="10px" height="10px" viewBox="0 0 24 24"
+          class="icon">
+          <path d="M23 13H2v-2h21v2z" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="10px" height="10px" viewBox="0 0 24 24"
+          class="icon">
+          <path d="M23 13H2v-2h21v2z" />
+        </svg>
       </button>
     </div>
 
@@ -47,11 +57,21 @@
       <div class="frontpage-card">
         <div class="forntpage-card__group">
           <div class="frontpage-cards__card">
-            <img src="img/Ting-er-ikke-alltid-svart-hvitt-1.svg" alt="colors name" class="img-1  reverse" />
-            <img src="img/smil.svg" alt="colors name" class="img-2  reverse" />
-            <img src="img/230807_Back-to-work-Kort.webp" alt="colors name" class="img-3 reverse" />
+            <div class="img-1 reverse">
+              <img src="img/Ting-er-ikke-alltid-svart-hvitt-1.svg" alt="colors name" class="img-card" />
+            </div>
+
+            <div class="img-2 reverse2">
+              <img src="img/smil.svg" alt="colors name" class="img-card" />
+            </div>
+
+            <div class="img-3 reverse3">
+              <img src="img/230807_Back-to-work-Kort.webp" alt="colors name" class="img-card" />
+            </div>
           </div>
+
         </div>
+
       </div>
     </div>
 
@@ -607,7 +627,8 @@
     <div class="block-section">
       <div class="block-content">
         <blockquote class="m--content">
-          <p class="block-content-p">Appex har meget dyktige folk som også er utrolig hyggelige å samarbeide med. Vi er
+          <p class="block-content-p">Appex har meget dyktige folk som også er utrolig hyggelige å samarbeide med. Vi
+            er
             veldig fornøyde med
             jobben de har gjort!</p>
           <span class="content-name">Marius Kallevik, daglig leder i Meglerhuset Rele</span>
