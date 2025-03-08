@@ -403,10 +403,15 @@
   background-color: transparent;
   border: none;
   margin: 0;
-  padding: 1px;
+  padding: 6px;
   position: absolute;
-  top: 4%;
-  right: 7%;
+  top: 2.3rem;
+  right: 4rem;
   rotate: 45deg;
-
+font-size: 3rem;
+font-weight: 400;
+text-transform: none;
+overflow: visible;
+color: #ffffff;
+vertical-align: inherit;
 }
