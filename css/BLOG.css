@@ -275,7 +275,6 @@
   background-color: #edece9;
   display: flex;
   justify-content: space-between;
-  align-content: center;
   padding: 0 5rem;
   width: 100%;
   height: 10rem;
@@ -332,4 +331,82 @@
 
 .icon {
   display: flex;
+}
+
+.logobtn {
+  font-size: 100%;
+  line-height: 1.15;
+  cursor: pointer;
+  color:black;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  overflow: visible;
+  text-transform: none;
+  outline: 0;
+}
+
+.hamburger {
+  color: black;
+  position: relative;
+  transform: translateY(-6px);
+  transition: all .3s cubic-bezier(.68,-.55,.27,1.55) .14s;
+  will-change: transform
+}
+
+.hamburger__top-bun {
+  transform: translateY(-10px) scaleY(.01);
+  transition: all .25s cubic-bezier(.68,-.55,.27,1.55) .1s;
+  will-change: transform;
+}
+
+.hamburger__salad {
+  transform: translateX(34px) translateY(-.5px);
+  transition: all .15s ease;
+  will-change: transform;
+}
+
+.hamburger:hover {
+  transform: translateY(-3px);
+}
+
+.hamburger:hover .hamburger__salad,.hamburger:hover .hamburger__top-bun {
+  transform: translate(0);
+}
+
+
+
+#navigation-full {
+  transform: translateY(100%) scaleY(.001);
+  transition: all .5scubic-bezier(.45,.05,.55,.95);
+  transition-delay: .45s;
+  opacity: 1;
+  background-color: #0835c4;
+  color: white;
+  inset: 0;
+  z-index: 40;
+  position: fixed;
+  visibility: hidden;
+}
+
+.container3{
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin: 0 auto;
+}
+
+#nav-close{
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 1px;
+  position: absolute;
+  top: 4%;
+  right: 7%;
+  rotate: 45deg;
+
 }
