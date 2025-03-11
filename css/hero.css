@@ -56,7 +56,7 @@
   position: absolute;
   pointer-events: none;
   animation: forwardPart 5s ease-in-out 1 forwards,
-    reversePart 5s ease-in-out 1 18s forwards;
+    reversePart 5s ease-in-out 1 17s forwards;
   z-index: -1;
 }
 
