@@ -375,6 +375,10 @@
   overflow-y: hidden;
 }
 
+.navigation__checkbox:checked ~ .navigation-full ~ .body-no-scroll {
+  overflow: hidden;
+}
+
 .navigation-full {
   width: 0;
   height: 100vh;
@@ -386,6 +390,7 @@
   z-index: 10000;
   overflow-y: visible;
   box-sizing: content-box;
+  overflow-x: hidden;
 }
 
 .container3 {
