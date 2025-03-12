@@ -55,8 +55,8 @@
 .img-1 {
   position: absolute;
   pointer-events: none;
-  animation: forwardPart 5s ease-in-out 1 forwards,
-    reversePart 5s ease-in-out 1 17s forwards;
+  animation: forwardPart 30s ease-in-out infinite;
+  animation-delay: 0s;
   z-index: -1;
 }
 
@@ -64,13 +64,10 @@
   0% {
     transform: rotate(0deg);
   }
-  100% {
+  3% {
     transform: rotate(-6deg);
   }
-}
-
-@keyframes reversePart {
-  0% {
+  80% {
     transform: rotate(-6deg);
   }
   100% {
@@ -82,23 +79,23 @@
   position: absolute;
   pointer-events: none;
   transform: translateX(95rem);
-  animation: roatateforward 6s ease-in-out 1 2s forwards,
-    reverserotate 5s ease-in-out 1 16s forwards;
-  z-index: 11113;
+  animation: roatateforward 24s ease-in-out infinite;
+  animation-delay: 4s;
+  z-index: 111134;
 }
 
 @keyframes roatateforward {
   0% {
     transform: translateX(95rem);
   }
-  100% {
+  5% {
     transform: translateX(-2rem);
   }
-}
-
-@keyframes reverserotate {
-  0% {
+  93% {
     transform: translateX(-2rem);
+  }
+  99% {
+    transform: translateX(0rem);
   }
   100% {
     transform: translateX(95rem);
@@ -109,28 +106,24 @@
   position: absolute;
   pointer-events: none;
   transform: translateX(95rem);
-  animation: roatateforward2 8s ease-in-out 1 3s forwards,
-    reverserotate2 5s ease-in-out 1 14s forwards;
-  z-index: 11113;
+  animation: roatateforward2 20s ease-in-out infinite;
+  animation-delay: 5s;
+  z-index: 111134;
 }
 
 @keyframes roatateforward2 {
   0% {
     transform: translateX(95rem);
   }
-  90% {
+  5% {
     transform: translateX(-5rem);
   }
-  100% {
+  5% {
     transform: translateX(0rem);
   }
-}
-
-@keyframes reverserotate2 {
-  0% {
+  90% {
     transform: translateX(0rem);
   }
-
   100% {
     transform: translateX(95rem);
   }
